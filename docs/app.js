@@ -69,14 +69,6 @@
     if (event.key.toLowerCase() === 'f') fullscreen.click();
   });
 
-  stage.addEventListener('pointermove', event => {
-    if (event.pointerType === 'touch') return;
-    const x = (event.clientX / window.innerWidth - .5) * -8;
-    const y = (event.clientY / window.innerHeight - .5) * -6;
-    slides[index].style.setProperty('--px', `${x}px`);
-    slides[index].style.setProperty('--py', `${y}px`);
-  });
-
   stage.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
   stage.addEventListener('touchend', event => {
     const delta = event.changedTouches[0].clientX - touchStartX;

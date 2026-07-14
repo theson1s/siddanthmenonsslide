@@ -6,15 +6,15 @@ An immersive six-slide Grade 9 presentation that explains where sunlight goes, w
 
 ## Files
 
-- `solar-radiation-immersive-humanized.pptx` — editable PowerPoint with native slide transitions and speaker notes.
-- `docs/` — dependency-free animated web edition for GitHub Pages.
+- `solar-radiation-immersive-high-resolution.pptx`: editable PowerPoint with vector text, native slide transitions and speaker notes.
+- `docs/`: dependency-free animated web edition for GitHub Pages with 2560 by 1440 slide images.
 
 ## Upload using the GitHub website
 
 1. Extract the ZIP file first. Do not upload the ZIP itself.
 2. On GitHub, create a new repository. A public repository is the simplest option for GitHub Pages.
 3. Open the new repository and choose **Add file → Upload files**.
-4. Drag in `README.md`, `solar-radiation-immersive-humanized.pptx`, and the complete `docs` folder. Keep the folder structure unchanged.
+4. Drag in `README.md`, `solar-radiation-immersive-high-resolution.pptx`, and the complete `docs` folder. Keep the folder structure unchanged.
 5. Add a commit message such as `Add solar radiation presentation`, then click **Commit changes**.
 6. Open **Settings → Pages**.
 7. Under **Build and deployment**, choose **Deploy from a branch**.
