@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030914">
+  <title>What Happens to Sunlight When It Reaches Earth?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage" aria-label="What happens to sunlight when it reaches Earth presentation">
+    <div class="ambient" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="slides" id="slides">
+      <section class="slide is-active" data-scene="1" aria-label="Slide 1 of 6: What happens to sunlight when it reaches Earth?">
+        <img src="assets/slide-01.png" alt="What happens to sunlight when it reaches Earth?" draggable="false">
+      </section>
+      <section class="slide" data-scene="2" aria-label="Slide 2 of 6: Three paths of solar radiation">
+        <img src="assets/slide-02.png" alt="Sunlight can bounce back, change direction or warm the surface" draggable="false">
+      </section>
+      <section class="slide" data-scene="3" aria-label="Slide 3 of 6: Surface albedo">
+        <img src="assets/slide-03.png" alt="Bright surfaces bounce light back while dark surfaces soak it up" draggable="false">
+      </section>
+      <section class="slide" data-scene="4" aria-label="Slide 4 of 6: Urban heat island effect">
+        <img src="assets/slide-04.png" alt="Why a city stays warmer than its greener surroundings after sunset" draggable="false">
+      </section>
+      <section class="slide" data-scene="5" aria-label="Slide 5 of 6: Latitude and seasons">
+        <img src="assets/slide-05.png" alt="Sunlight hits the equator more directly than high latitudes" draggable="false">
+      </section>
+      <section class="slide" data-scene="6" aria-label="Slide 6 of 6: Atmospheric layers and synthesis">
+        <img src="assets/slide-06.png" alt="The atmosphere is Earth's energy filter" draggable="false">
+      </section>
+    </div>
+
+    <div class="light-sweep" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
+
+    <button class="side-nav side-nav--prev" id="sidePrev" type="button" aria-label="Previous slide">‹</button>
+    <button class="side-nav side-nav--next" id="sideNext" type="button" aria-label="Next slide">›</button>
+
+    <nav class="controls" aria-label="Presentation controls">
+      <button id="prev" type="button" aria-label="Previous slide">←</button>
+      <button id="play" type="button" aria-label="Start automatic playback" aria-pressed="false">▶</button>
+      <button id="next" type="button" aria-label="Next slide">→</button>
+      <button id="fullscreen" type="button" aria-label="Enter fullscreen">⛶</button>
+    </nav>
+    <div class="counter" aria-live="polite"><span id="current">01</span><b>/</b><span>06</span></div>
+    <div class="hint">Arrow keys · swipe · space to play</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
