@@ -11,40 +11,159 @@
   <main class="stage" aria-label="What happens to sunlight when it reaches Earth presentation">
     <div class="ambient" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="slides" id="slides">
-      <section class="slide is-active" data-scene="1" aria-label="Slide 1 of 6: What happens to sunlight when it reaches Earth?">
+      <section class="slide is-active" data-scene="1" aria-label="Slide 1: What happens to sunlight when it reaches Earth?">
         <img src="assets/slide-01.png" alt="What happens to sunlight when it reaches Earth?" draggable="false">
       </section>
-      <section class="slide" data-scene="2" aria-label="Slide 2 of 6: Three paths of solar radiation">
+      <section class="slide" data-scene="2" aria-label="Slide 2: Three paths of solar radiation">
         <img src="assets/slide-02.png" alt="Sunlight can bounce back, change direction or warm the surface" draggable="false">
       </section>
-      <section class="slide" data-scene="3" aria-label="Slide 3 of 6: Surface albedo">
+      <section class="slide" data-scene="3" aria-label="Slide 3: Surface albedo">
         <img src="assets/slide-03.png" alt="Bright surfaces bounce light back while dark surfaces soak it up" draggable="false">
       </section>
-      <section class="slide" data-scene="4" aria-label="Slide 4 of 6: Urban heat island effect">
+      <section class="slide" data-scene="4" aria-label="Slide 4: Urban heat island effect">
         <img src="assets/slide-04.png" alt="Why a city stays warmer than its greener surroundings after sunset" draggable="false">
       </section>
-      <section class="slide" data-scene="5" aria-label="Slide 5 of 6: Latitude and seasons">
+      <section class="slide" data-scene="5" aria-label="Slide 5: Latitude and seasons">
         <img src="assets/slide-05.png" alt="Sunlight hits the equator more directly than high latitudes" draggable="false">
       </section>
-      <section class="slide" data-scene="6" aria-label="Slide 6 of 6: Atmospheric layers and synthesis">
-        <img src="assets/slide-06.png" alt="The atmosphere is Earth's energy filter" draggable="false">
+      <section class="slide quiz-slide" data-scene="6" aria-label="Slide 6: Interactive albedo questions">
+        <div class="quiz-experience" id="quizExperience">
+          <div class="gateway" id="gateway">
+            <img class="gateway-art" src="assets/nebula-earth-quiz.png" alt="A glowing Earth surrounded by a blue and violet nebula" draggable="false">
+            <div class="gateway-shade" aria-hidden="true"></div>
+            <button class="earth-portal" id="earthPortal" type="button" aria-label="Click Earth to open the albedo questions">
+              <span class="portal-ring portal-ring-one" aria-hidden="true"></span>
+              <span class="portal-ring portal-ring-two" aria-hidden="true"></span>
+            </button>
+            <div class="warp-lines" aria-hidden="true"></div>
+          </div>
+
+          <div class="question-field" id="questionField" aria-hidden="true">
+            <header class="field-header">
+              <div>
+                <span class="mission-label">QUICK CHECK</span>
+                <h2>Pick a note and see if you were right.</h2>
+              </div>
+              <button class="back-to-space" id="backToSpace" type="button">Back to space</button>
+            </header>
+
+            <div class="question-grid">
+              <button class="concept-card" type="button" aria-expanded="false">
+                <span class="question-number">01</span>
+                <strong>Which has a higher albedo: Snow or Black soil?</strong>
+                <span class="reveal-label">Tap to reveal</span>
+                <span class="concept-answer"><small>ANSWER</small> Snow</span>
+              </button>
+
+              <button class="concept-card" type="button" aria-expanded="false">
+                <span class="question-number">02</span>
+                <strong>Which absorbs more solar radiation: Ocean water or Ice?</strong>
+                <span class="reveal-label">Tap to reveal</span>
+                <span class="concept-answer"><small>ANSWER</small> Ocean water</span>
+              </button>
+
+              <button class="concept-card" type="button" aria-expanded="false">
+                <span class="question-number">03</span>
+                <strong>Which reflects more sunlight: Light-coloured soil or Black soil?</strong>
+                <span class="reveal-label">Tap to reveal</span>
+                <span class="concept-answer"><small>ANSWER</small> Light-coloured soil</span>
+              </button>
+
+              <button class="concept-card" type="button" aria-expanded="false">
+                <span class="question-number">04</span>
+                <strong>Which reflects more sunlight: Ice or Ocean water?</strong>
+                <span class="reveal-label">Tap to reveal</span>
+                <span class="concept-answer"><small>ANSWER</small> Ice</span>
+              </button>
+            </div>
+
+            <button class="letter-button" id="letterButton" type="button" aria-label="Open the albedo activity sheet">
+              <span class="letter-icon" aria-hidden="true">&#9993;</span>
+              <span>Activity</span>
+            </button>
+
+            <div class="paper-backdrop" id="paperBackdrop" aria-hidden="true">
+              <article class="paper" role="dialog" aria-modal="true" aria-labelledby="paperTitle">
+                <button class="paper-close" id="paperClose" type="button" aria-label="Close activity sheet">&#10005;</button>
+                <div class="paper-heading">
+                  <span>ALBEDO NOTES</span>
+                  <h2 id="paperTitle">Write high albedo or low albedo</h2>
+                  <p>Circle one answer for each surface.</p>
+                </div>
+
+                <div class="activity-list">
+                  <div class="activity-row" data-correct="high">
+                    <div class="material"><b>1</b><span>Snow</span><em class="answer-blur">High albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <div class="activity-row" data-correct="high">
+                    <div class="material"><b>2</b><span>Ice</span><em class="answer-blur">High albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <div class="activity-row" data-correct="low">
+                    <div class="material"><b>3</b><span>Crushed rock</span><em class="answer-blur">Low albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <div class="activity-row" data-correct="high">
+                    <div class="material"><b>4</b><span>Light-coloured soil</span><em class="answer-blur">High albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <div class="activity-row" data-correct="low">
+                    <div class="material"><b>5</b><span>Black soil</span><em class="answer-blur">Low albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <div class="activity-row" data-correct="low">
+                    <div class="material"><b>6</b><span>Ocean water</span><em class="answer-blur">Low albedo</em></div>
+                    <div class="choices">
+                      <button type="button" data-choice="low">Low albedo</button>
+                      <button type="button" data-choice="high">High albedo</button>
+                      <span class="result-mark" aria-live="polite"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="reset-activity" id="resetActivity" type="button">Reset activity</button>
+              </article>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
     <div class="light-sweep" aria-hidden="true"></div>
     <div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
 
-    <button class="side-nav side-nav--prev" id="sidePrev" type="button" aria-label="Previous slide">‹</button>
-    <button class="side-nav side-nav--next" id="sideNext" type="button" aria-label="Next slide">›</button>
+    <button class="side-nav side-nav--prev" id="sidePrev" type="button" aria-label="Previous slide">&#8249;</button>
+    <button class="side-nav side-nav--next" id="sideNext" type="button" aria-label="Next slide">&#8250;</button>
 
     <nav class="controls" aria-label="Presentation controls">
-      <button id="prev" type="button" aria-label="Previous slide">←</button>
-      <button id="play" type="button" aria-label="Start automatic playback" aria-pressed="false">▶</button>
-      <button id="next" type="button" aria-label="Next slide">→</button>
-      <button id="fullscreen" type="button" aria-label="Enter fullscreen">⛶</button>
+      <button id="prev" type="button" aria-label="Previous slide">&#8592;</button>
+      <button id="play" type="button" aria-label="Start automatic playback" aria-pressed="false">&#9654;</button>
+      <button id="next" type="button" aria-label="Next slide">&#8594;</button>
+      <button id="fullscreen" type="button" aria-label="Enter fullscreen">&#9974;</button>
     </nav>
-    <div class="counter" aria-live="polite"><span id="current">01</span><b>/</b><span>06</span></div>
-    <div class="hint">Arrow keys · swipe · space to play</div>
+    <div class="counter" aria-live="polite"><span id="current">01</span><b>/</b><span id="total">06</span></div>
+    <div class="hint">Arrow keys &middot; swipe &middot; space to play</div>
   </main>
   <script src="app.js"></script>
 </body>
