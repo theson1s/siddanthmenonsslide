@@ -1,6 +1,6 @@
 # What Happens to Sunlight When It Reaches Earth?
 
-An immersive six-slide Grade 9 presentation that explains where sunlight goes, why surfaces warm differently, why cities stay hot, how latitude changes solar energy, and how the atmosphere affects temperature.
+An immersive six-slide Grade 10 presentation that explains where sunlight goes, why surfaces warm differently, why cities stay hot, how latitude changes solar energy, and how the atmosphere affects temperature.
 
 ![Presentation cover](docs/assets/slide-01.png)
 
